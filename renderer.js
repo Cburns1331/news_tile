@@ -15,8 +15,8 @@ request.onload = function() {
 
             const logo  = document.createElement('img')
             logo.src    = data.url
-            logo.height = 250px
-            logo.width  = 250px
+            logo.height = 250
+            logo.width  = 250
 
             app.appendChild(logo)
       } else {
