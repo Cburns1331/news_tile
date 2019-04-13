@@ -13,8 +13,10 @@ request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
             const app = document.getElementById('root')
 
-            const logo = document.createElement('img')
-            logo.src = data.url
+            const logo  = document.createElement('img')
+            logo.src    = data.url
+            logo.height = 250px
+            logo.width  = 250px
 
             app.appendChild(logo)
       } else {
