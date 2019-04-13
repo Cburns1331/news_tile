@@ -13,6 +13,9 @@ request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
             const app = document.getElementById('root')
 
+            const container = document.createElement('div')
+            container.setAttribute('class', 'container')
+            
             const aBox  = document.createElement('div')
             aBox.class  = 'card'
             aBox.style  = 'width: 18rem;' 
@@ -23,9 +26,9 @@ request.onload = function() {
             const aCardBody  = document.createElement('div')
             aBox.class  = 'card-body'
 
-            const title  = document.createElement('h1')
+            const title  = document.createElement('text')
             title.textContent = data.title
-            title.class = "card-text"
+            title.class = "text"
 
             const logo  = document.createElement('img')
             logo.src    = data.url
@@ -34,6 +37,9 @@ request.onload = function() {
             logo.class  = 'card-img-top'
 
             aCol.appendChild(title)
+            app.appendChild(container)
+            container.appendChild(text)
+            container.appendChild(card-img-top)
             aBox.appendChild(aCardBody)
             aBox.appendChild(logo)
             aCol.appendChild(aBox)
