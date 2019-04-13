@@ -9,12 +9,16 @@ request.onload = function() {
 
       // Begin accessing JSON data here
       var data = JSON.parse(this.response)
-      const h1 = document.createElement('h1')
 
       if (request.status >= 200 && request.status < 400) {
-            h1.textContent = response.url
+            const app = document.getElementById('root')
+
+            const logo = document.createElement('img')
+            logo.src = data.url
+
+            app.appendChild(logo)
       } else {
-            h1.textContent = "please"
+             console.log('error')
       }
-      request.send()
 }
+request.send()
