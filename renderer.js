@@ -13,12 +13,19 @@ request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
             const app = document.getElementById('root')
 
+            const aBox  = document.createElement('div')
+            
+            const title  = document.createElement('h1')
+            title.textContent = data.title
+
             const logo  = document.createElement('img')
             logo.src    = data.url
             logo.height = 250
             logo.width  = 250
 
-            app.appendChild(logo)
+            aBox.appendChild(title)
+            aBox.appendChild(logo)
+            app.appendChild(aBox)
       } else {
              console.log('error')
       }
