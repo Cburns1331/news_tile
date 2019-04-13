@@ -14,18 +14,30 @@ request.onload = function() {
             const app = document.getElementById('root')
 
             const aBox  = document.createElement('div')
-            
+            aBox.class  = 'card'
+            aBox.style  = 'width: 18rem;' 
+
+            const aCol  = document.createElement('div')
+            aBox.class  = 'col-sm-6'
+
+            const aCardBody  = document.createElement('div')
+            aBox.class  = 'card-body'
+
             const title  = document.createElement('h1')
             title.textContent = data.title
+            title.class = "card-text"
 
             const logo  = document.createElement('img')
             logo.src    = data.url
             logo.height = 250
             logo.width  = 250
+            logo.class  = 'card-img-top'
 
-            aBox.appendChild(title)
+            aCol.appendChild(title)
+            aBox.appendChild(aCardBody)
             aBox.appendChild(logo)
-            app.appendChild(aBox)
+            aCol.appendChild(aBox)
+            app.appendChild(aCol)
       } else {
              console.log('error')
       }
