@@ -15,35 +15,27 @@ request.onload = function() {
 
             const container = document.createElement('div')
             container.setAttribute('class', 'container')
-            
-            const aBox  = document.createElement('div')
-            aBox.class  = 'card'
-            aBox.style  = 'width: 18rem;' 
 
-            const aCol  = document.createElement('div')
-            aBox.class  = 'col-sm-6'
+            app.appendChild(container); 
 
-            const aCardBody  = document.createElement('div')
-            aBox.class  = 'card-body'
+            const card  = document.createElement('div')
+            card.setAttribute('class', 'card');
 
-            const title  = document.createElement('text')
-            title.textContent = data.title
-            title.class = "text"
+            const aText  = document.createElement('div')
+            aText.textContent = data.title
+            aText.class = 'card-text'
 
             const logo  = document.createElement('img')
             logo.src    = data.url
             logo.height = 250
             logo.width  = 250
-            logo.class  = 'card-img-top'
+            logo.class  = 'img'
 
-            aCol.appendChild(title)
-            app.appendChild(container)
-            container.appendChild(text)
-            container.appendChild(card-img-top)
-            aBox.appendChild(aCardBody)
-            aBox.appendChild(logo)
-            aCol.appendChild(aBox)
-            app.appendChild(aCol)
+            container.appendChild(card);
+            //card.appendChild(aText);
+            card.appendChild(logo);
+
+
       } else {
              console.log('error')
       }
